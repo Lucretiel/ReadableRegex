@@ -57,7 +57,7 @@ What horror! There's a reason regular expressions have a reputation as being a "
 const char* http_request_regex =
     SUBMATCH(AT_LEAST_ONE("[A-Z]")) /* METHOD */
     SPACE
-    OPTIONAL(SUBMATCH("http://" LAZY(MANY(URI_CHARACTER))) /* DOMAIN */
+    OPTIONAL(SUBMATCH("http://" MINIMAL(MANY(URI_CHARACTER))) /* DOMAIN */
     "/" SUBMATCH(MANY(URI_CHARACTER)) /* PATH */
     SPACE
     "HTTP/" SUBMATCH(
