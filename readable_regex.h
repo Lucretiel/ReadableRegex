@@ -62,26 +62,25 @@
 
 #ifndef SAFE_REGEX
 
-#define AT_MOST U_AT_MOST
-#define AT_LEAST U_AT_LEAST
-#define EXACTLY U_EXACTLY
-#define WITHIN U_WITHIN
+#define AT_MOST(...) U_AT_MOST(__VA_ARGS__)
+#define AT_LEAST(...) U_AT_LEAST(__VA_ARGS__)
+#define EXACTLY(...) U_EXACTLY(__VA_ARGS__)
+#define WITHIN(...) U_WITHIN(__VA_ARGS__)
 
-#define MANY U_MANY
-#define AT_LEAST_ONE U_AT_LEAST_ONE
-#define OPTIONAL U_OPTIONAL
-#define EITHER U_EITHER
+#define MANY(...) U_MANY(__VA_ARGS__)
+#define AT_LEAST_ONE(...) U_AT_LEAST_ONE(__VA_ARGS__)
+#define OPTIONAL(...) U_OPTIONAL(__VA_ARGS__)
+#define EITHER(...) U_EITHER(__VA_ARGS__)
 
 #else
 
-#define AT_MOST S_AT_MOST
-#define AT_LEAST S_AT_LEAST
-#define EXACTLY S_EXACTLY
-#define WITHIN S_WITHIN
+#define AT_LEAST(...) S_AT_LEAST(__VA_ARGS__)
+#define EXACTLY(...) S_EXACTLY(__VA_ARGS__)
+#define WITHIN(...) S_WITHIN(__VA_ARGS__)
 
-#define MANY S_MANY
-#define AT_LEAST_ONE S_AT_LEAST_ONE
-#define OPTIONAL S_OPTIONAL
-#define EITHER S_EITHER
+#define MANY(...) S_MANY(__VA_ARGS__)
+#define AT_LEAST_ONE(...) S_AT_LEAST_ONE(__VA_ARGS__)
+#define OPTIONAL(...) S_OPTIONAL(__VA_ARGS__)
+#define EITHER(...) S_EITHER(__VA_ARGS__)
 
- #endif
+#endif
